@@ -10,6 +10,7 @@
 │  projects. Typecabinet collects patterns for    │
 │  dealing with typefaces, point sizes,           │
 │  typographic detailing, and layout structures.  │
+│                                                 │
 ├─────────────────────────────────────────────────┤
 └─────────────────────────────────────────────────┘
 */
@@ -22,6 +23,9 @@
 
 // tc-point-sizes creates a scale for type sizes.
 @import 'tc-point-sizes';
+
+// [ ] TODO: Sassy Modular Scale integration
+// @import 'modular-scale'
 
 // tc-extensions are a set of helpers for manipulating type.
 @import 'tc-extentions';

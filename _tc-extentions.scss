@@ -1,10 +1,30 @@
 // ┌─────────────────┐
 // │ TYPE MODIFERS   │
 // └─────────────────┘
-%upperCase {
-  text-transform: uppercase;
+
+// Casing
+@mixin case($case) {
+  @if $case == "upper" {
+    text-transform: uppercase;
+  } @else if $case == "lower" {
+    text-transform: lowercase;
+  } @else if $case == "title" {
+    text-transform: capitalize;
+  } @else if $case == "full-width" {
+    text-transform: full-width;
+  } @else {
+    text-transform: none;
+  }
 }
 
+// Tracking
 @mixin tracking($space) {
   letter-spacing: $space*$p
 }
+
+// Leading
+@mixin leading($lead) {
+  line-height: $lead*$baseline;
+}
+
+// TODO: more things!

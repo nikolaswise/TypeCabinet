@@ -1,87 +1,168 @@
 /*
-┌─────────────────────────────────────────────────┐
-├─────────────────────────────────────────────────┤
-│ Point Sizes - Reference                         │
-├─────────────────────────────────────────────────┤
-├─────────────────────────────────────────────────┤
-│ PIXELS                                   POINTS │
-├─────────────────────────────────────────────────┤
-│ 12px                                     p9     │
-├─────────────────────────────────────────────────┤
-│ 14px                                     p10.5  │
-├─────────────────────────────────────────────────┤
-│ 16px                                     p12    │
-├─────────────────────────────────────────────────┤
-│ 18px                                     p13.5  │
-├─────────────────────────────────────────────────┤
-│ 24px                                     p18    │
-├─────────────────────────────────────────────────┤
-│ 32px                                     p24    │
-├─────────────────────────────────────────────────┤
-│ 38px                                     p28.5  │
-├─────────────────────────────────────────────────┤
-└─────────────────────────────────────────────────┘
+┌──────────────────────────────┐
+├──────────────────────────────┤
+│ Point Sizes - Reference      │
+├──────────────────────────────┤
+├──────────────────────────────┤
+│ POINTS      REM    REM@16 PX │
+├──────────────────────────────┤
+│ 6                            │
+├──────────────────────────────┤
+│ 7                            │
+├──────────────────────────────┤
+│ 8                            │
+├──────────────────────────────┤
+│ 9                            │
+├──────────────────────────────┤
+│ 10                           │
+├──────────────────────────────┤
+│ 11                           │
+├──────────────────────────────┤
+│ 12p         1rem        16px │
+├──────────────────────────────┤
+│ 14                           │
+├──────────────────────────────┤
+│ 16                           │
+├──────────────────────────────┤
+│ 18                           │
+├──────────────────────────────┤
+│ 21                           │
+├──────────────────────────────┤
+│ 24                           │
+├──────────────────────────────┤
+│ 36                           │
+├──────────────────────────────┤
+│ 48                           │
+├──────────────────────────────┤
+│ 60                           │
+├──────────────────────────────┤
+│ 72                           │
+├──────────────────────────────┤
+│                              │
+├──────────────────────────────┤
+└──────────────────────────────┘
 */
-
-// ┌─────────────────┐
-// │ TO REM          │
-// └─────────────────┘
-@function calculateRem($size) {
-  $remSize: $size / 12;
-  //Default font size on html element is 100%, equivalent to 16px, or 12 point.;
-  @return $remSize*1rem;
-}
-
-// ┌─────────────────┐
-// │ PIXEL FALLBACK  │
-// └─────────────────┘
-@mixin fontSize($size) {
-  font-size: $size*1px;
-  font-size: calculateRem($size);
-}
 
 // ┌─────────────────┐
 // │ POINTSIZES      │
 // └─────────────────┘
-%p9 {
+
+@mixin p9 {
+  // Adjust moves the baseline of the typeface
+  // to the bottom of the line height. This
+  // prevents the baseline floating in the
+  // vertical center of line heights that are
+  // a multiple of the baseline.
+  $adjust: 0;
+  // Font Size is based on % of a REM.
   font-size: 9*$point;
+  // Line Height defined by tc-config.
+  line-height: 1*$baseline;
+  // Zeroing Margin Top allows baseline.
+  margin-top: 0;
+  // Padding-top and Margin-bottom mirror.
+  padding-top: $adjust*$p;
+  margin-bottom: -$adjust*$p;}
+
+@mixin p10 {
+  $adjust: 0;
+  font-size: 10*$point;
   line-height: 1*$baseline;
   margin-top: 0;
-  padding-top: 7*$p;
-  margin-bottom: -7*$p;}
-%p10-5 {
-  font-size:10.5*$point;
+  padding-top: $adjust*$p;
+  margin-bottom: -$adjust*$p;}
+@mixin p11 {
+  $adjust: 0;
+  font-size: 11*$point;
   line-height: 1*$baseline;
   margin-top: 0;
-  padding-top: 5.5*$p;
-  margin-bottom: -5.5*$p;}
-%p12 {
+  padding-top: $adjust*$p;
+  margin-bottom: -$adjust*$p;}
+@mixin p12 {
+  $adjust: 0;
   font-size:12*$point;
   line-height: 1*$baseline;
   margin-top: 0;
-  padding-top: 4*$p;
-  margin-bottom: -4*$p;}
-%p13-5 {
-  font-size:13.5*$point;
-    line-height: 1*$baseline;
+  padding-top: $adjust*$p;
+  margin-bottom: -$adjust*$p;}
+@mixin p14 {
+  $adjust: 0;
+  font-size:14*$point;
+  line-height: 1*$baseline;
   margin-top: 0;
-  padding-top: 4.5*$p;
-  margin-bottom: -4.5*$p;}
-%p18 {
+  padding-top: $adjust*$p;
+  margin-bottom: -$adjust*$p;}
+@mixin p16 {
+  $adjust: 0;
+  font-size:16*$point;
+  line-height: 1*$baseline;
+  margin-top: 0;
+  padding-top: $adjust*$p;
+  margin-bottom: -$adjust*$p;}
+@mixin p18 {
+  $adjust: 0;
   font-size:18*$point;
-  line-height: 1.66*$baseline;
+  line-height: 1*$baseline;
   margin-top: 0;
-  padding-top: 3*$p;
-  margin-bottom: -3*$p;}
-%p24 {
+  padding-top: *$p;
+  margin-bottom: -*$p;}
+@mixin p21 {
+  $adjust: 0;
+  font-size:21*$point;
+  line-height: 2*$baseline;
+  margin-top: 0;
+  padding-top: *$p;
+  margin-bottom: -*$p;}
+@mixin p24 {
+  $adjust: 0;
   font-size:24*$point;
   line-height: 2*$baseline;
   margin-top: 0;
-  padding-top: 9*$p;
-  margin-bottom: -9*$p;}
-%p28-5 {
-  font-size:28.5*$point;
+  padding-top: *$p;
+  margin-bottom: -*$p;}
+@mixin p36 {
+  $adjust: 0;
+  font-size: 36*$point;
   line-height: 2*$baseline;
   margin-top: 0;
-  padding-top: 8.5*$p;
-  margin-bottom: -8.5*$p;}
+  padding-top: $adjust*$p;
+  margin-bottom: -$adjust*$p;}
+@mixin p48 {
+  $adjust: 0;
+  font-size: 48*$point;
+  line-height: 2*$baseline;
+  margin-top: 0;
+  padding-top: $adjust*$p;
+  margin-bottom: -$adjust*$p;}
+@mixin p60 {
+  $adjust: 0;
+  font-size: 60*$point;
+  line-height: 2*$baseline;
+  margin-top: 0;
+  padding-top: $adjust*$p;
+  margin-bottom: -$adjust*$p;}
+@mixin p72 {
+  $adjust: 0;
+  font-size: 72*$point;
+  line-height: 2*$baseline;
+  margin-top: 0;
+  padding-top: $adjust*$p;
+  margin-bottom: -$adjust*$p;}
+
+// TODO: Do this stuff. Wire in Modular Scale helper? Add pixel fallbacks?
+// ┌─────────────────┐
+// │ TO REM          │
+// └─────────────────┘
+// @function calculateRem($size) {
+//   $remSize: $size / 12;
+//   //Default font size on html element is 100%, equivalent to 16px, or 12 point.;
+//   @return $remSize*1rem;
+// }
+
+// ┌─────────────────┐
+// │ PIXEL FALLBACK  │
+// └─────────────────┘
+// @mixin fontSize($size) {
+//   font-size: $size*1px;
+//   font-size: calculateRem($size);
+// }
