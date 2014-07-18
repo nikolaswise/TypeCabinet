@@ -27,13 +27,18 @@
   @include respond-to($medium) {
     padding-top: 2*$baseline;
   }
+}
 
-  .header-link {
-    @extend .header-face;
-    @include tracking(20);
-    @include font-size(1);
-    text-transform: uppercase;
-  }
+.doc-nav {
+  padding-top: 2*$baseline;
+  margin-bottom: 2*$baseline;
+}
+
+.header-link {
+  @extend .header-face;
+  @include tracking(20);
+  @include font-size(1);
+  text-transform: uppercase;
 }
 
 
@@ -52,7 +57,6 @@ a {
   &:hover {
     color: $dark-gray;
   }
-
 }
 
 hr {
@@ -84,13 +88,6 @@ hr {
     right: 0;
   }
 
-  .stripe {
-    background-color: red;
-    height: 100%;
-    width: 3em;
-    display: block;
-  }
-
   .title-block {
     z-index: 2;
     position: relative;;
@@ -100,7 +97,6 @@ hr {
     @include font-size(7);
     @include tracking(60);
     @extend .header-light;
-    // text-transform: uppercase;
   }
   .subtitle {
     @include font-size(2);

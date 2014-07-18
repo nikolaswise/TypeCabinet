@@ -7,7 +7,7 @@ h2,
 h3,
 h4,
 h5,
-h6, .nav .header-link, .header-italic, .header-bold, .header-bold-italic {
+h6, .header-link, .header-italic, .header-bold, .header-bold-italic {
   letter-spacing: 0em; }
 
 .header-light, .header .title {
@@ -29,7 +29,7 @@ h2,
 h3,
 h4,
 h5,
-h6, .nav .header-link {
+h6, .header-link {
   font-family: "Ideal Sans SSm A", "Ideal Sans SSm B", "Avenir Next W01", "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   font-style: normal; }
@@ -38,12 +38,12 @@ h6, .nav .header-link {
   h3 b,
   h4 b,
   h5 b,
-  h6 b, .nav .header-link b, .header-face strong, h1 strong,
+  h6 b, .header-link b, .header-face strong, h1 strong,
   h2 strong,
   h3 strong,
   h4 strong,
   h5 strong,
-  h6 strong, .nav .header-link strong {
+  h6 strong, .header-link strong {
     font-weight: 600; }
 
 .header-italic {
@@ -1525,13 +1525,18 @@ mark {
   @media screen and (max-width: 860px) {
     .nav {
       padding-top: 3.3rem; } }
-  .nav .header-link {
-    letter-spacing: 0.02em;
-    font-size: 1.125rem;
-    line-height: 1.65rem;
-    text-transform: uppercase; }
-    .nav .header-link small, .nav .header-link sup, .nav .header-link sub {
-      font-size: 1rem; }
+
+.doc-nav {
+  padding-top: 3.3rem;
+  margin-bottom: 3.3rem; }
+
+.header-link {
+  letter-spacing: 0.02em;
+  font-size: 1.125rem;
+  line-height: 1.65rem;
+  text-transform: uppercase; }
+  .header-link small, .header-link sup, .header-link sub {
+    font-size: 1rem; }
 
 body {
   padding: 0;
@@ -1572,11 +1577,6 @@ hr {
     left: 0;
     bottom: 0;
     right: 0; }
-  .header .stripe {
-    background-color: red;
-    height: 100%;
-    width: 3em;
-    display: block; }
   .header .title-block {
     z-index: 2;
     position: relative; }

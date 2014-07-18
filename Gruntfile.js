@@ -49,17 +49,34 @@ module.exports = function(grunt) {
       }
     },
     'markdown': {
-      all: {
+      index: {
         files: [
           {
             expand: true,
             src: 'site/index.md',
             dest: './',
             ext: '.html'
-          }
+          },
         ],
         options: {
           template: 'site/layout.html',
+          markdownOptions: {
+            gfm: true,
+            highlight: 'manual'
+          }
+        }
+      },
+      docs: {
+        files: [
+          {
+            expand: true,
+            src: 'site/documentation.md',
+            dest: './',
+            ext: '.html'
+          },
+        ],
+        options: {
+          template: 'site/doc-layout.html',
           markdownOptions: {
             gfm: true,
             highlight: 'manual'
