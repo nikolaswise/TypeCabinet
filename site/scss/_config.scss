@@ -11,6 +11,10 @@ $darkest-gray:          #1F1F1F !default;
 $off-black:             #050505 !default;
 $black:                 #000000 !default;
 
+$background-color:      #FAF9F8;
+$background-accent:     #F2F2F2;
+$blue:                  #95aed4;
+
 // Breakpoints
 $small:                    480px    !default;
 $medium:                   860px    !default;
@@ -56,15 +60,14 @@ $baseline:  1.65rem;
 // ┌───────────────┐
 // │ Font Families │
 // └───────────────┘
-$header-family:    'Avenir Next W01', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
-$body-family:      'Frutiger W01', "Lucida Grande", "Segoe UI", "Arial", sans-serif !default;
-$secondary-family: 'Kepler W08 Caption', Georgia, serif !default;
+$header-family:    'Ideal Sans SSm A', 'Ideal Sans SSm B', 'Avenir Next W01', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$body-family:      'Whitney SSm A', 'Whitney SSm B', 'Frutiger W01', "Lucida Grande", "Segoe UI", "Arial", sans-serif !default;
+$secondary-family: 'Sentinel SSm A', 'Sentinel SSm B', 'Kepler W08 Caption', Georgia, serif !default;
 $code-family:        "Consolas", "Andale Mono", "Lucida Console", "Monaco", "Courier New", Courier, monospace !default;
-
 // ┌───────────────┐
 // │ Base Tracking │
 // └───────────────┘
 $header-tracking: 0;
-$body-tracking: 30;
+$body-tracking: 0;
 $secondary-tracking: 10;
 $code-tracking: 0;

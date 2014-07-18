@@ -8,8 +8,8 @@
 
 **Lorem ipsum dolor sit amet**, consectetur<sup>1</sup> adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat<sup>2</sup>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui _officia deserunt mollit anim id est laborum._
 
-<blockquote>
-	<h2 class="secondary-bold-italic">
+<blockquote class="leader-2 trailer-2">
+	<h2 class="secondary-bold-italic blue center">
 		Everything is designed.<br>
 		Few things are designed well.
 	</h2>
