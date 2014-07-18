@@ -35,8 +35,7 @@ module.exports = function(grunt) {
     'sass': {
       lib: {
         files: {
-          'site/css/typographic.css' : 'lib/typographic.scss',
-          'site/css/layout.css' : 'site/scss/layout.scss',
+          'site/css/style.css' : 'site/scss/style.scss',
         }
       }
     },

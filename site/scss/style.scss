@@ -1,0 +1,41 @@
+@import 'config';
+@import 'typecabinet/typecabinet';
+@import 'viewport-grid/viewport-grid';
+
+.right {
+  float: right;
+  text-align: right;
+}
+.left {
+  float: left;
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.nav {
+  .header-link {
+
+  }
+}
+
+.header {
+  .title {
+    @include font-size(7);
+  }
+  .subtitle {
+    @include font-size(2);
+  }
+}
+
+.main {
+
+}
+
+.footer {
+  .collophone {
+
+  }
+}
