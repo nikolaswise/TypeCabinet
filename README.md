@@ -15,7 +15,6 @@
 | $secondary-tracking 	 | Default [tracking](#) for the secondary family. |
 | $code-tracking 		 | Default [tracking](#) for the code family.|
 
-
 | Family Weights        |                                   |
 | --------------------------------------------------------- |
 | $var: 400, 700     	| Takes two font weights. Sets the weight of the corresponding classname to the first, and the weight of the `<b>` and `<strong>` tags to the second.      |
