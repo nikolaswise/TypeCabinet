@@ -16,7 +16,7 @@
 | $code-tracking 		 | Default [tracking](#) for the code family.|
 
 | Family Weights        |                                   |
-| --------------------------------------------------------- |
+| --------------------- | --------------------------------- |
 | $var: 400, 700     	| Takes two font weights. Sets the weight of the corresponding classname to the first, and the weight of the `<b>` and `<strong>` tags to the second.      |
 | $header-regular: 400,600 | Will create two extendable helper classes - `.header-face` and `.header-italic`.       |
 | $header-light: 300,400 | Will create two extendable helper classes - `.header-light` and `.header-light-italic`.       |
