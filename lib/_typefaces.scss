@@ -4,16 +4,21 @@
 %header-tracking {
   @include tracking($header-tracking);
 }
-.header-light {
-  @extend %header-tracking;
-  font-family: $header-family; font-weight: 300; font-style: normal;
-  b, strong {font-weight: 400;}
-}
-.header-light-italic {
-  @extend %header-tracking;
-  font-family: $header-family; font-weight: 300; font-style: italic;
-  b, strong {font-weight: 400;}
-}
+
+// @if $header-light {
+//   .header-light {
+//     @extend %header-tracking;
+//     font-family: $header-family; font-weight: $header-light; font-style: normal;
+//     // b, strong {font-weight: 400;}
+//   }
+//   .header-light-italic {
+//     @extend %header-tracking;
+//     font-family: $header-family; font-weight: $header-light; font-style: italic;
+//     // b, strong {font-weight: 400;}
+//   }
+// }
+
+
 .header-face {
   @extend %header-tracking;
   font-family: $header-family; font-weight: 400; font-style: normal;
@@ -24,6 +29,7 @@
   font-family: $header-family; font-weight: 400; font-style: italic;
   b, strong {font-weight: 600;}
 }
+
 .header-bold {
   @extend %header-tracking;
   font-family: $header-family; font-weight: 600; font-style: normal;

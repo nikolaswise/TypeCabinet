@@ -1,6 +1,7 @@
 @import 'config';
 @import 'typecabinet/typecabinet';
 @import 'viewport-grid/viewport-grid';
+@import 'tables';
 
 .right {
   float: right;
@@ -18,29 +19,6 @@
 .blue {
   color: $blue;
 }
-
-.nav {
-  position: absolute;
-  width: 100%;
-  padding-top: 10*$baseline;
-
-  @include respond-to($medium) {
-    padding-top: 2*$baseline;
-  }
-}
-
-.doc-nav {
-  padding-top: 2*$baseline;
-  margin-bottom: 2*$baseline;
-}
-
-.header-link {
-  @extend .header-face;
-  @include tracking(20);
-  @include font-size(1);
-  text-transform: uppercase;
-}
-
 
 body {
   padding: 0;
@@ -67,21 +45,24 @@ hr {
 }
 
 .header {
-  background: url(/type.png) no-repeat no-repeat center;
+  background: url(/img/type.png) no-repeat no-repeat center;
   display: block;
   background-color: transparent;
   position: relative;
   background-size: cover;
-  padding: 8*$baseline 0 8*$baseline 0;
-  margin-bottom: 2*$baseline;
   border-bottom: 3px solid $background-accent;
-  z-index: -1;
+  z-index: 0;
   position: relative;
 
+  max-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+
   &:before {
-    background: url(/dot-grid.png);
+    background: url(/img/dot-grid.png);
     content: '';
     position: absolute;
+    z-index: 0;
     top: 0;
     left: 0;
     bottom: 0;
@@ -90,21 +71,37 @@ hr {
 
   .title-block {
     z-index: 2;
+    padding-top: 25vh;
     position: relative;;
   }
 
   .title {
-    @include font-size(7);
-    @include tracking(60);
+    @include font-size(5);
+    @include tracking(90);
     @extend .header-light;
+    text-transform: uppercase;
   }
   .subtitle {
     @include font-size(2);
+    text-align: center;
   }
 }
 
-.main {
+.quick-navigation {
+  @include font-size(1);
+  @include tracking(100);
+  text-transform: uppercase;
+  list-style-type: none;
+}
 
+.content {
+  max-width: 40rem;
+  margin: auto;
+
+  h1,
+  h2 {
+    margin-top: 2*$baseline;
+  }
 }
 
 .footer {

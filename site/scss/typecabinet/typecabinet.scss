@@ -1,8 +1,5 @@
-@import 'composition-helpers';
-@import 'typefaces.scss';
-@import 'modular-scale.scss';
-@import 'defaults.scss';
-
-
-// Indesign Character Pallette Mixin
-// The metaphor of Composition and Typesetting
+@import 'config';
+@import 'typesetting-mixins';
+@import 'typefaces';
+@import 'modular-scale';
+@import 'defaults';

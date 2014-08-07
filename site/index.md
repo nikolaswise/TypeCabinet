@@ -1,102 +1,46 @@
 
-# Do wafting zephyrs quickly vex Jumbo?
-## Go, lazy fat vixen; be shrewd, jump quick.
-### Fickle jinx bog dwarves spy math quiz.
-#### Big dwarves heckle my top quiz of jinx.
-##### Fickle bog dwarves jinx empathy quiz.
-###### Public junk dwarves hug my quartz fox.
+### Reference
 
-**Lorem ipsum dolor sit amet**, consectetur<sup>1</sup> adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat<sup>2</sup>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui _officia deserunt mollit anim id est laborum._
+| Variables              | 									 |
+| ---------------------- | --------------------------------- |
+| $ratio 				 | Proportion that defines the [scale](#).|
+| $body-size 			 | Default size of body type.	     |
+| $small-size 			 | Default size of small type.       |
+| $baseline 			 | Increment that defines the [baseline grid](#). |
+| $header-family 		 | Font stack to use for header elements. |
+| $body-family 			 | Font stack to use for default type elements.  |
+| $secondary-family 	 | Font stack that suplements the body family. Usually serif if body is sans. |
+| $code-family 			 | Font stack to use for code elements. |
+| $header-tracking 		 | Default [tracking](#) for the header family. |
+| $body-tracking 		 | Default [tracking](#) for the body family. |
+| $secondary-tracking 	 | Default [tracking](#) for the secondary family. |
+| $code-tracking 		 | Default [tracking](#) for the code family.|
 
-<blockquote class="leader-2 trailer-2">
-	<h2 class="secondary-bold-italic blue center">
-		Everything is designed.<br>
-		Few things are designed well.
-	</h2>
-</blockquote>
 
-<p class="secondary-face">
-**Lorem ipsum dolor sit amet**, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui _officia deserunt mollit anim id est laborum._
-</p>
+| Family Weights        |                                   |
+| --------------------------------------------------------- |
+| $var: 400, 700     	| Takes two font weights. Sets the weight of the corresponding classname to the first, and the weight of the `<b>` and `<strong>` tags to the second.      |
+| $header-regular: 400,600 | Will create two extendable helper classes - `.header-face` and `.header-italic`.       |
+| $header-light: 300,400 | Will create two extendable helper classes - `.header-light` and `.header-light-italic`.       |
+| $header-bold: false    | Will not create helper classes for that weight in family.                                  |
 
-<p><small>**Lorem ipsum dolor sit amet**, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui _officia deserunt mollit anim id est laborum._</small></p>
+| Mixins                 | 									 |
+| ---------------------- | --------------------------------- |
+| tracking(n)           | Sets [tracking](#) within the element in increments of 1/1000 em.			       	      |
+| leading(n)            | Sets the [line-height](#) of an element as a multiple of the baseline increment.			    |
+| word-spacing(n)       | Sets the [word spacing](#) within the element in increments of 1/1000 em.			       	     |
+| font-size(n)          | Sets the font-size of an element at an $n (integer) number of steps up or down the [modular scale](#).   				       	                                  |
+| modular-scale(n)      | Function that returns a rem value that corresponds to the $n (integer) number of steps up or down the [modular scale](#). 			       	           |
 
----
+### Harmony & Scale
+TypeCabinet uses [Modular Scale 1.0](https://github.com/Team-Sass/modular-scale/blob/1.x/readme.md) to define a double-stranded composition scale. The scale is calculated from the `$ratio` variable, and the two base type size variables, `$body-size` and `$small-size`. The primary use for this scale is in defining font sizes, stepping up and down the scale to create a page that reflects principles of [meaningful typography](http://alistapart.com/article/more-meaningful-typography). The `modular-scale()` function is also exposed, and returns rem values from the scale, and can be used to construct layouts and larger page structures.
 
-# Esri Geotrigger Service
+### Type Families
+There are four type families exposed for use in TypeCabinet, though many projects may use less. Header, Body, Secondary, and Code families are ready to use in a variety of weights. Variables in the `_config.scss` file define the stacks for the given families, and helper classes can either be extended from within sass stylesheets, or applied directly to html elements.
 
-- What does the Geotrigger Service do?
-- Use Cases
-- What is a trigger?
+### Tracking, Leading, and Word Spacing
+Default tracking options are available for each type family indendently within `_condfig.scss`. For example, if your body face consistently needs to be tracked out to maintain readabillity, you can
 
-The Esri Geotrigger Service provides real-time location tracking, geofencing, and messaging tools for developers working on location based apps.
+### Vertical Rhythym
 
-### What does the Geotrigger Service do?
-
-The Geotrigger Service provides a way to add location-based alerts to iPhone and Android apps, while minimizing battery drain. The Geotrigger SDKs make use of several tracking profiles which are optimized for various use cases. The Geotrigger Service is cloud-based and does not require ArcGIS Server to run.
-
-The Geotrigger Service can send messages to devices or notify your server so you can implement custom actions when triggers are fired. You can use the Geotrigger API to programmatically create a collection of triggers based on existing data sets, or allow users to create their own triggers.
-
-### Use Cases
-
-- Easily send messages to users when they arrive at certain areas.
-- Create a workout tracking app without needing to build your own backend.
-- Quickly track whether people are using your app more in your stores or at home.
-- More Use Cases
-
-### What is a trigger?
-
-A trigger can be thought of as an invisible button or geofence that will execute an action when a condition is satisfied. When your mobile device enters (or leaves) the trigger area, the Geotrigger Service will send a notification to the device or to your server.
-
-A trigger is composed of two components: a **condition** and an **action**.
-
-A **condition** has a **geometry** (polygon or circle) and a **direction** (enter or leave). When the condition is met, i.e. you have just entered or left, the **action** is performed.
-
-The **action** tells the Geotrigger Service to send a push notification with a preset message to a device and/or POST a blob of JSON data to your server. Actions can also be used to change the tracking profile on a device.
-
-#### What can I do with **triggers**?
-
-- Send a push notification to a user’s device when they enter or leave an area
-- Send information about a trigger firing to a callback URL, which enables custom actions to be carried out on your server
-
----
-
-<dl>
-  <dt>Trigger</dt>
-  <dd>A trigger is composed of two components: a **condition** and an **action**.</dd>
-
-  <dt>Condition</dt>
-  <dd>A **condition** has a **geometry** (polygon or circle) and a **direction** (enter or leave). When the condition is met, i.e. you have just entered or left, the **action** is performed.</dd>
-
-	<dt>Action</dt>
-	<dd>The **action** tells the Geotrigger Service to send a push notification with a preset message to a device and/or POST a blob of JSON data to your server. Actions can also be used to change the tracking profile on a device.</dd>
-</dl>
-
----
-
-```
-// request
-curl -H "Authorization: Bearer <Application or Device Access Token>" \
-   -H "Content-type: application/json" -X GET \
-   -d '{"tags": [ "red" ]}' \
-   "http://geotrigger.arcgis.com/location/last"
-
-// response
-{
-  "devices": [
-    {
-      "device": {
-        "deviceId": "8907123u9yasdjkn",
-        "tags": ["red", "device:8907123u9yasdjkn"],
-        "properties": {}
-      },
-      "location": {
-        "latitude":   51.883333,
-        "longitude":  -176.645,
-        "accuracy":   10.0,
-        "timestamp":  "2014-02-18T16:03:53-0700"
-      }
-    }
-  ]
-}
-```
+### Composing the Page

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>TypeCabinet</title>
     <link rel="shortcut icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="css/typographic.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6998452/734102/css/fonts.css" />
 
@@ -14,131 +13,148 @@
   <body>
     <div class="wrapper">
       <div class="page">
-        <nav class="nav">
-          <div class="container">
-            <div class="column-3 left">
-              <p class="header-link">
-                <a href="/documentation.html">Documentation</a>
-              </p>
-            </div>
-            <div class="column-3 right">
-              <p class="header-link">
-                <a href="https://github.com/nikolaswise/TypeCabinet">Github</a>
-              </p>
-            </div>
-          </div>
-        </nav>
 
         <header class="header">
           <div class="container title-block">
             <div class="column-12 pre-6 center">
-              <h1 class='title'>TypeCabinet</h1>
-              <p class='subtitle'>A SASS library for managing typography, informed by letterpress typesetting.</p>
+              <h1 class='title trailer-1'>TypeCabinet</h1>
+              <blockquote class="subtitle secondary-italic trailer-half">A set of css and sass tools for managing typographic elements.</blockquote>
+              <p><a href="https://github.com/nikolaswise/TypeCabinet">On Github</a></p>
             </div>
           </div>
         </header>
 
-        <main class='main container'>
+<!--         <main class='main container'>
           <div class="column-18 pre-3">
-            <h1 id="do-wafting-zephyrs-quickly-vex-jumbo-">Do wafting zephyrs quickly vex Jumbo?</h1>
-<h2 id="go-lazy-fat-vixen-be-shrewd-jump-quick-">Go, lazy fat vixen; be shrewd, jump quick.</h2>
-<h3 id="fickle-jinx-bog-dwarves-spy-math-quiz-">Fickle jinx bog dwarves spy math quiz.</h3>
-<h4 id="big-dwarves-heckle-my-top-quiz-of-jinx-">Big dwarves heckle my top quiz of jinx.</h4>
-<h5 id="fickle-bog-dwarves-jinx-empathy-quiz-">Fickle bog dwarves jinx empathy quiz.</h5>
-<h6 id="public-junk-dwarves-hug-my-quartz-fox-">Public junk dwarves hug my quartz fox.</h6>
-<p><strong>Lorem ipsum dolor sit amet</strong>, consectetur<sup>1</sup> adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat<sup>2</sup>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui <em>officia deserunt mollit anim id est laborum.</em></p>
-<blockquote class="leader-2 trailer-2">
-    <h2 class="secondary-bold-italic blue center">
-        Everything is designed.<br>
-        Few things are designed well.
-    </h2>
-</blockquote>
+            <div class="content">
+              <h3 id="reference">Reference</h3>
+<table>
+<thead>
+<tr>
+<th>Variables</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ratio</td>
+<td>Proportion that defines the <a href="#">scale</a>.</td>
+</tr>
+<tr>
+<td>$body-size</td>
+<td>Default size of body type.</td>
+</tr>
+<tr>
+<td>$small-size</td>
+<td>Default size of small type.</td>
+</tr>
+<tr>
+<td>$baseline</td>
+<td>Increment that defines the <a href="#">baseline grid</a>.</td>
+</tr>
+<tr>
+<td>$header-family</td>
+<td>Font stack to use for header elements.</td>
+</tr>
+<tr>
+<td>$body-family</td>
+<td>Font stack to use for default type elements.</td>
+</tr>
+<tr>
+<td>$secondary-family</td>
+<td>Font stack that suplements the body family. Usually serif if body is sans.</td>
+</tr>
+<tr>
+<td>$code-family</td>
+<td>Font stack to use for code elements.</td>
+</tr>
+<tr>
+<td>$header-tracking</td>
+<td>Default <a href="#">tracking</a> for the header family.</td>
+</tr>
+<tr>
+<td>$body-tracking</td>
+<td>Default <a href="#">tracking</a> for the body family.</td>
+</tr>
+<tr>
+<td>$secondary-tracking</td>
+<td>Default <a href="#">tracking</a> for the secondary family.</td>
+</tr>
+<tr>
+<td>$code-tracking</td>
+<td>Default <a href="#">tracking</a> for the code family.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Family Weights</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$var: 400, 700</td>
+<td>Takes two font weights. Sets the weight of the corresponding classname to the first, and the weight of the <code>&lt;b&gt;</code> and <code>&lt;strong&gt;</code> tags to the second.</td>
+</tr>
+<tr>
+<td>$header-regular: 400,600</td>
+<td>Will create two extendable helper classes - <code>.header-face</code> and <code>.header-italic</code>.</td>
+</tr>
+<tr>
+<td>$header-light: 300,400</td>
+<td>Will create two extendable helper classes - <code>.header-light</code> and <code>.header-light-italic</code>.</td>
+</tr>
+<tr>
+<td>$header-bold: false</td>
+<td>Will not create helper classes for that weight in family.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Mixins</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tracking(n)</td>
+<td>Sets <a href="#">tracking</a> within the element in increments of 1/1000 em.</td>
+</tr>
+<tr>
+<td>leading(n)</td>
+<td>Sets the <a href="#">line-height</a> of an element as a multiple of the baseline increment.</td>
+</tr>
+<tr>
+<td>word-spacing(n)</td>
+<td>Sets the <a href="#">word spacing</a> within the element in increments of 1/1000 em.</td>
+</tr>
+<tr>
+<td>font-size(n)</td>
+<td>Sets the font-size of an element at an $n (integer) number of steps up or down the <a href="#">modular scale</a>.</td>
+</tr>
+<tr>
+<td>modular-scale(n)</td>
+<td>Function that returns a rem value that corresponds to the $n (integer) number of steps up or down the <a href="#">modular scale</a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="harmony-scale">Harmony &amp; Scale</h3>
+<p>TypeCabinet uses <a href="https://github.com/Team-Sass/modular-scale/blob/1.x/readme.md">Modular Scale 1.0</a> to define a double-stranded composition scale. The scale is calculated from the <code>$ratio</code> variable, and the two base type size variables, <code>$body-size</code> and <code>$small-size</code>. The primary use for this scale is in defining font sizes, stepping up and down the scale to create a page that reflects principles of <a href="http://alistapart.com/article/more-meaningful-typography">meaningful typography</a>. The <code>modular-scale()</code> function is also exposed, and returns rem values from the scale, and can be used to construct layouts and larger page structures.</p>
+<h3 id="type-families">Type Families</h3>
+<p>There are four type families exposed for use in TypeCabinet, though many projects may use less. Header, Body, Secondary, and Code families are ready to use in a variety of weights. Variables in the <code>_config.scss</code> file define the stacks for the given families, and helper classes can either be extended from within sass stylesheets, or applied directly to html elements.</p>
+<h3 id="tracking-leading-and-word-spacing">Tracking, Leading, and Word Spacing</h3>
+<p>Default tracking options are available for each type family indendently within <code>_condfig.scss</code>. For example, if your body face consistently needs to be tracked out to maintain readabillity, you can</p>
+<h3 id="vertical-rhythym">Vertical Rhythym</h3>
+<h3 id="composing-the-page">Composing the Page</h3>
 
-<p class="secondary-face">
-<strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui <em>officia deserunt mollit anim id est laborum.</em>
-</p>
-
-<p><small><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui <em>officia deserunt mollit anim id est laborum.</em></small></p>
-
-<hr>
-<h1 id="esri-geotrigger-service">Esri Geotrigger Service</h1>
-<ul>
-<li>What does the Geotrigger Service do?</li>
-<li>Use Cases</li>
-<li>What is a trigger?</li>
-</ul>
-<p>The Esri Geotrigger Service provides real-time location tracking, geofencing, and messaging tools for developers working on location based apps.</p>
-<h3 id="what-does-the-geotrigger-service-do-">What does the Geotrigger Service do?</h3>
-<p>The Geotrigger Service provides a way to add location-based alerts to iPhone and Android apps, while minimizing battery drain. The Geotrigger SDKs make use of several tracking profiles which are optimized for various use cases. The Geotrigger Service is cloud-based and does not require ArcGIS Server to run.</p>
-<p>The Geotrigger Service can send messages to devices or notify your server so you can implement custom actions when triggers are fired. You can use the Geotrigger API to programmatically create a collection of triggers based on existing data sets, or allow users to create their own triggers.</p>
-<h3 id="use-cases">Use Cases</h3>
-<ul>
-<li>Easily send messages to users when they arrive at certain areas.</li>
-<li>Create a workout tracking app without needing to build your own backend.</li>
-<li>Quickly track whether people are using your app more in your stores or at home.</li>
-<li>More Use Cases</li>
-</ul>
-<h3 id="what-is-a-trigger-">What is a trigger?</h3>
-<p>A trigger can be thought of as an invisible button or geofence that will execute an action when a condition is satisfied. When your mobile device enters (or leaves) the trigger area, the Geotrigger Service will send a notification to the device or to your server.</p>
-<p>A trigger is composed of two components: a <strong>condition</strong> and an <strong>action</strong>.</p>
-<p>A <strong>condition</strong> has a <strong>geometry</strong> (polygon or circle) and a <strong>direction</strong> (enter or leave). When the condition is met, i.e. you have just entered or left, the <strong>action</strong> is performed.</p>
-<p>The <strong>action</strong> tells the Geotrigger Service to send a push notification with a preset message to a device and/or POST a blob of JSON data to your server. Actions can also be used to change the tracking profile on a device.</p>
-<h4 id="what-can-i-do-with-triggers-">What can I do with <strong>triggers</strong>?</h4>
-<ul>
-<li>Send a push notification to a user’s device when they enter or leave an area</li>
-<li>Send information about a trigger firing to a callback URL, which enables custom actions to be carried out on your server</li>
-</ul>
-<hr>
-<dl>
-  <dt>Trigger</dt>
-  <dd>A trigger is composed of two components: a <strong>condition</strong> and an <strong>action</strong>.</dd>
-
-  <dt>Condition</dt>
-  <dd>A <strong>condition</strong> has a <strong>geometry</strong> (polygon or circle) and a <strong>direction</strong> (enter or leave). When the condition is met, i.e. you have just entered or left, the <strong>action</strong> is performed.</dd>
-
-    <dt>Action</dt>
-    <dd>The <strong>action</strong> tells the Geotrigger Service to send a push notification with a preset message to a device and/or POST a blob of JSON data to your server. Actions can also be used to change the tracking profile on a device.</dd>
-</dl>
-
-<hr>
-<pre><code><span class="comment">//</span> <span class="comment">request</span>
-<span class="comment">curl</span> <span class="literal">-</span><span class="comment">H</span> <span class="comment">"Authorization:</span> <span class="comment">Bearer</span> &lt;<span class="comment">Application</span> <span class="comment">or</span> <span class="comment">Device</span> <span class="comment">Access</span> <span class="comment">Token</span>&gt;<span class="comment">"</span> <span class="comment">\</span>
-   <span class="literal">-</span><span class="comment">H</span> <span class="comment">"Content</span>-<span class="comment">type:</span> <span class="comment">application/json"</span> <span class="literal">-</span><span class="comment">X</span> <span class="comment">GET</span> <span class="comment">\</span>
-   <span class="literal">-</span><span class="comment">d</span> <span class="comment">'{"tags":</span> <span class="title">[</span> <span class="comment">"red"</span> <span class="title">]</span><span class="comment">}'</span> <span class="comment">\</span>
-   <span class="comment">"http://geotrigger</span>.<span class="comment">arcgis</span>.<span class="comment">com/location/last"</span>
-
-<span class="comment">//</span> <span class="comment">response</span>
-<span class="comment">{</span>
-  <span class="comment">"devices":</span> <span class="title">[</span>
-    <span class="comment">{</span>
-      <span class="comment">"device":</span> <span class="comment">{</span>
-        <span class="comment">"deviceId":</span> <span class="comment">"8907123u9yasdjkn"</span>,
-        <span class="comment">"tags":</span> <span class="title">[</span><span class="comment">"red"</span>, <span class="comment">"device:8907123u9yasdjkn"</span>]<span class="string">,</span>
-        <span class="comment">"properties":</span> <span class="comment">{}</span>
-      <span class="comment">}</span>,
-      <span class="comment">"location":</span> <span class="comment">{</span>
-        <span class="comment">"latitude":</span>   <span class="comment">51</span>.<span class="comment">883333</span>,
-        <span class="comment">"longitude":</span>  <span class="literal">-</span><span class="comment">176</span>.<span class="comment">645</span>,
-        <span class="comment">"accuracy":</span>   <span class="comment">10</span>.<span class="comment">0</span>,
-        <span class="comment">"timestamp":</span>  <span class="comment">"2014</span>-<span class="comment">02</span>-<span class="comment">18T16:03:53</span>-<span class="comment">0700"</span>
-      <span class="comment">}</span>
-    <span class="comment">}</span>
-  <span class="title">]</span>
-<span class="comment">}</code></pre>
-
+            </div>
           </div>
-        </main>
+        </main> -->
       </div>
-
-      <footer class="footer">
-        <div class="container">
-          <div class="column-12 pre-6 center">
-            <p class="collophone">
-              footer stuff maybe
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   </body>
 </html>

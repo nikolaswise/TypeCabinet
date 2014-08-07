@@ -33,9 +33,14 @@ module.exports = function(grunt) {
       },
     },
     'sass': {
-      lib: {
+      site: {
         files: {
           'site/css/style.css' : 'site/scss/style.scss',
+        }
+      },
+      lib: {
+        files: {
+          'site/css/type.css' : 'site/scss/typecabinet.scss',
         }
       }
     },
@@ -60,23 +65,6 @@ module.exports = function(grunt) {
         ],
         options: {
           template: 'site/layout.html',
-          markdownOptions: {
-            gfm: true,
-            highlight: 'manual'
-          }
-        }
-      },
-      docs: {
-        files: [
-          {
-            expand: true,
-            src: 'site/documentation.md',
-            dest: './',
-            ext: '.html'
-          },
-        ],
-        options: {
-          template: 'site/doc-layout.html',
           markdownOptions: {
             gfm: true,
             highlight: 'manual'
