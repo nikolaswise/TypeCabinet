@@ -1,0 +1,56 @@
+// ┌────────────┐
+// │ Structural │
+// └────────────┘
+$ratio: 1.5; // perfect-fifth
+$body-size: 1rem;       // 16px
+$small0size: 0.75rem;   // 12px
+$baseline:  1.65rem;
+
+// ┌───────────────┐
+// │ Font Families │
+// └───────────────┘
+$header-family: 'Ideal Sans SSm A', 'Ideal Sans SSm B', 'Avenir Next W01', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;$header-thin: false;
+$header-thin: false;
+$header-light: 300, 400;
+$header-regular: 400, 600;
+$header-medium: false;
+$header-demi: false;
+$header-bold: 600, 600;
+$header-black: false;
+
+$body-family: 'Whitney SSm A', 'Whitney SSm B', 'Frutiger W01', "Lucida Grande", "Segoe UI", "Arial", sans-serif !default;$body-thin: false;
+$body-thin: false;
+$body-light: false;
+$body-regular: 400, 700;
+$body-medium: false;
+$body-demi: false;
+$body-bold: 700, 700;
+$body-black: false;
+
+$secondary-family: 'Sentinel SSm A', 'Sentinel SSm B', 'Kepler W08 Caption', Georgia, serif !default;$secondary-thin: false;
+$secondary-thin: false;
+$secondary-light: false;
+$secondary-regular: 400, 700;
+$secondary-medium: false;
+$secondary-demi: false;
+$secondary-bold: 700, 700;
+$secondary-black: false;
+
+$code-family: "Consolas", "Andale Mono", "Lucida Console", "Monaco", "Courier New", Courier, monospace !default;$code-thin: false;
+$code-thin: false;
+$code-light: false;
+$code-regular: 400, 400;
+$code-medium: false;
+$code-demi: false;
+$code-bold: false;
+$code-black: false;
+
+
+// ┌───────────────┐
+// │ Base Tracking │
+// └───────────────┘
+$header-tracking: 0;
+$body-tracking: 30;
+$secondary-tracking: 10;
+$code-tracking: 0;
+
