@@ -1594,7 +1594,7 @@ hr {
   margin-bottom: 3.3rem; }
 
 .header {
-  background: url(/img/type.png) no-repeat no-repeat center;
+  background: url(../img/type.png) no-repeat no-repeat center;
   display: block;
   background-color: transparent;
   position: relative;
@@ -1606,7 +1606,7 @@ hr {
   height: 100vh;
   width: 100vw; }
   .header:before {
-    background: url(/img/dot-grid.png);
+    background: url(../img/dot-grid.png);
     content: '';
     position: absolute;
     z-index: 0;

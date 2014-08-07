@@ -45,7 +45,7 @@ hr {
 }
 
 .header {
-  background: url(/img/type.png) no-repeat no-repeat center;
+  background: url(../img/type.png) no-repeat no-repeat center;
   display: block;
   background-color: transparent;
   position: relative;
@@ -59,7 +59,7 @@ hr {
   width: 100vw;
 
   &:before {
-    background: url(/img/dot-grid.png);
+    background: url(../img/dot-grid.png);
     content: '';
     position: absolute;
     z-index: 0;
