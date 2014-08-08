@@ -11,8 +11,8 @@ module.exports = function(grunt) {
     },
     'watch': {
       sass: {
-        files: ['./lib/**/*'],
-        tasks: ['sass'],
+        files: ['./dist/**/*'],
+        tasks: ['copy'],
         options: {
           nospawn: true
         }
@@ -36,12 +36,21 @@ module.exports = function(grunt) {
       site: {
         files: {
           'site/css/style.css' : 'site/scss/style.scss',
+        },
+        options: {
+          loadPath: [
+            'dist/',
+            'site/scss/lib/viewport-grid/lib/'
+          ],
+          lineNumbers: true
         }
       },
-      lib: {
-        files: {
-          'site/css/type.css' : 'site/scss/typecabinet.scss',
-        }
+    },
+    'copy': {
+      dist: {
+        files: [
+          {expand: true, src: ['dist/*'], dest: 'site/scss/lib/typecabinet', filter: 'isFile'},
+        ]
       }
     },
     'connect': {
@@ -80,8 +89,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('grunt-markdown');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('build', ['markdown', 'sass']);
+  grunt.registerTask('build', ['markdown', 'copy', 'sass']);
   grunt.registerTask('develop', ['connect', 'build', 'watch']);
   grunt.registerTask('deploy', ['build', 'gh-pages']);
   grunt.registerTask('default', ['develop']);

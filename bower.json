@@ -1,0 +1,28 @@
+{
+  "name": "typecabinet",
+  "version": "1.0.2",
+  "main": "dist/typecabinet.scss",
+  "homepage": "http://nikolaswise.github.io/TypeCabinet/",
+  "authors": [
+    "Nikolas Wise <nikolaswise@gmail.com>"
+  ],
+  "description": "A typographic sass framework",
+  "keywords": [
+    "Sass",
+    "Type",
+    "Typography"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    ".sass_cache",
+    ".grunt",
+    "site"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "viewport-grid": "*"
+  }
+}
