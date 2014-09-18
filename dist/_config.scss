@@ -1,201 +1,100 @@
 // ┌─────────────────┐
 // │ SCALE:  MUSICAL │
 // └─────────────────┘
-$octave:     2;
-$major7th:   1.875;
-$minor7th:   1.778;
-$major6th:   1.667;
-$minor6th:   1.6;
-$fifth:      1.5;
-$dim5th:     1.414;
-$aug4th:     1.414;
-$fourth:     1.33;
-$major3rd:   1.25;
-$minor3rd:   1.2;
-$major2nd:   1.125;
-$minor2nd:   1.067;
-$unison:     1;
+$octave:             2;
+$major7th:           1.875;
+$minor7th:           1.778;
+$major6th:           1.667;
+$minor6th:           1.6;
+$fifth:              1.5;
+$dim5th:             1.414;
+$aug4th:             1.414;
+$fourth:             1.33;
+$major3rd:           1.25;
+$minor3rd:           1.2;
+$major2nd:           1.125;
+$minor2nd:           1.067;
+$unison:             1;
 
 // ┌───────────────┐
 // │ SCALE:  OTHER │
 // └───────────────┘
-$golden:     1.618;
+$golden:             1.618;
 
 // ┌────────────┐
 // │ Structural │
 // └────────────┘
-$ratio:      $golden          !default;
-$body-size:  1rem             !default;
-$small-size: 0.75rem          !default;
-$baseline:   1.5rem           !default;
-$indent:     1em              !default;
+$ratio:              $golden           !default;
+$body-size:          1rem              !default;
+$small-size:         0.75rem           !default;
+$baseline:           1.5rem            !default;
+$indent:             1em               !default;
 
 // ┌───────────────┐
 // │ Font Families │
 // └───────────────┘
-$header-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
-$header-thin: false           !default;
-$header-thin: false           !default;
-$header-light: 300, 400       !default;
-$header-regular: 400, 600     !default;
-$header-medium: false         !default;
-$header-demi: false           !default;
-$header-bold: 600, 600        !default;
-$header-black: false          !default;
+$header-family:      'Helvetica Neue',
+                     'Helvetica',
+                     'Arial',
+                     sans-serif        !default;
 
-$body-family: "Lucida Grande", "Segoe UI", "Arial", sans-serif !default;
-$body-thin: false             !default;
-$body-thin: false             !default;
-$body-light: false            !default;
-$body-regular: 400, 700       !default;
-$body-medium: false           !default;
-$body-demi: false             !default;
-$body-bold: 700, 700          !default;
-$body-black: false            !default;
+$header-thin:        false             !default;
+$header-thin:        false             !default;
+$header-light:       300, 400          !default;
+$header-regular:     400, 600          !default;
+$header-medium:      false             !default;
+$header-demi:        false             !default;
+$header-bold:        600, 600          !default;
+$header-black:       false             !default;
 
-$secondary-family: Georgia, serif !default;
-$secondary-thin: false        !default;
-$secondary-thin: false        !default;
-$secondary-light: false       !default;
-$secondary-regular: 400, 700  !default;
-$secondary-medium: false      !default;
-$secondary-demi: false        !default;
-$secondary-bold: 700, 700     !default;
-$secondary-black: false       !default;
+$body-family:        "Lucida Grande",
+                     "Segoe UI",
+                     "Arial",
+                     sans-serif        !default;
 
-$code-family: "Consolas", "Andale Mono", "Lucida Console", "Monaco", "Courier New", Courier, monospace !default;
-$code-thin: false             !default;
-$code-thin: false             !default;
-$code-light: false            !default;
-$code-regular: 400, 400       !default;
-$code-medium: false           !default;
-$code-demi: false             !default;
-$code-bold: false             !default;
-$code-black: false            !default;
+$body-thin:          false             !default;
+$body-thin:          false             !default;
+$body-light:         false             !default;
+$body-regular:       400, 700          !default;
+$body-medium:        false             !default;
+$body-demi:          false             !default;
+$body-bold:          700, 700          !default;
+$body-black:         false             !default;
+
+$secondary-family:   Georgia,
+                     serif             !default;
+
+$secondary-thin:     false             !default;
+$secondary-thin:     false             !default;
+$secondary-light:    false             !default;
+$secondary-regular:  400, 700          !default;
+$secondary-medium:   false             !default;
+$secondary-demi:     false             !default;
+$secondary-bold:     700, 700          !default;
+$secondary-black:    false             !default;
+
+$code-family:        "Consolas",
+                     "Andale Mono",
+                     "Lucida Console",
+                     "Monaco",
+                     "Courier New",
+                     Courier,
+                     monospace         !default;
+
+$code-thin:          false             !default;
+$code-thin:          false             !default;
+$code-light:         false             !default;
+$code-regular:       400, 400          !default;
+$code-medium:        false             !default;
+$code-demi:          false             !default;
+$code-bold:          false             !default;
+$code-black:         false             !default;
 
 
 // ┌───────────────┐
 // │ Base Tracking │
 // └───────────────┘
-$header-tracking: 0           !default;
-$body-tracking: 30            !default;
-$secondary-tracking: 10       !default;
-$code-tracking: 0             !default;
-
-// ┌─────────┐
-// │ Unicode │
-// └─────────┘
-// ┌───────┐
-// │ Basic │
-// └───────┘
-// space
-$space: "\0020";
-// non-breaking space
-$nbsp: "\00a0";
-
-// ┌───────────┐
-// │ Quotation │
-// └───────────┘
-// quotation mark
-$quot: "\0022";
-// left single curly quote
-$lsquo: "\2018";
-// right single curly quote
-$rsquo: "\2019";
-// left double curly quote
-$ldquo: "\201C";
-// right double curly quote
-$rdquo: "\201D";
-// left single angle quote (guillemet)
-$lsaquo: "\2039";
-// right single angle quote (guillemet)
-$rsaquo: "\203A";
-// left double angle quote (guillemet)
-$laquo: "\00ab";
-// right double angle quote (guillemet)
-$raquo: "\00bb";
-
-// ┌──────┐
-// │ Dash │
-// └──────┘
-// em dash (mutton)
-$mdash: "\2014";
-// en dash (nut)
-$ndash: "\2013";
-// hyphen
-$hyphen: "\2010";
-
-// ┌─────────┐
-// │ Symbols │
-// └─────────┘
-// ampersand
-$amp: "\0026";
-// greater than
-$gt: "\003e";
-// less than
-$lt: "\003c";
-// times
-$times: "\00D7";
-// big times
-$bigtimes: "\2715";
-// checkmark
-$checkmark: "\2713";
-// section sign (double S, hurricane, sectional symbol, the legal doughnut, signum sectionis)
-$sect: "\00a7";
-// paragraph symbol (pilcrow)
-$para: "\00b6";
-// middot (interpunct, interpoint)
-$middot: "\00b7";
-// o-slash (slashed o)
-$oslash: "\00f8";
-// bullet
-$bull: "\2022";
-// white bullet
-$whibull: "\25E6";
-// horizontal ellipsis
-$hellip: "\2026";
-// vertical ellipsis
-$vellip: "\22EE";
-// midline horizontal ellipsis
-$midhellip: "\22EF";
-
-// ┌────────┐
-// │ Shapes │
-// └────────┘
-// up-pointing triangle
-$utri: "\25b2";
-// down-pointing triangle
-$dtri: "\25bc";
-// left-pointing triangle
-$ltri: "\25c0";
-// right-pointing triangle
-$rtri: "\25b6";
-// up-pointing small triangle
-$ustri: "\25b4";
-// down-pointing small triangle
-$dstri: "\25be";
-// left-pointing small triangle
-$lstri: "\25c2";
-// right-pointing small triangle
-$rstri: "\25b8";
-// diamond
-$diamond: "\25c6";
-// fisheye
-$fisheye: "\25c9";
-// bullseye
-$bullseye: "\25ce";
-// circle
-$circle: "\25cf";
-// white circle
-$whitecircle: "\25cb";
-// square
-$square: "\25a0";
-// white square
-$whitesquare: "\25a1";
-// small square
-$ssquare: "\25aa";
-// small white square
-$swhitesquare: "\25ab";
-
-
-
+$header-tracking:    0                 !default;
+$body-tracking:      30                !default;
+$secondary-tracking: 10                !default;
+$code-tracking:      0                 !default;

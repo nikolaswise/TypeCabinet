@@ -1,6 +1,6 @@
 {
   "name": "TypeCabinet",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/nikolaswise/TypeCabinet",
   "authors": [
     "Nikolas Wise <nikolaswise@gmail.com>"
@@ -20,7 +20,7 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "site/scss/lib",
+    "site/",
     "test",
     "tests"
   ]
