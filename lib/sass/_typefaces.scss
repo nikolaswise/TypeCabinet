@@ -290,9 +290,9 @@
   }
 }
 
-// ┌───────────────────┐
-// │ code Classes │
-// └───────────────────┘
+// ┌──────────────┐
+// │ Code Classes │
+// └──────────────┘
 %code-tracking {
   @include tracking($code-tracking);
 }

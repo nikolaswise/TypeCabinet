@@ -1,6 +1,7 @@
 @import 'config';
-@import 'typesetting-mixins';
+@import 'mixins';
 @import 'typefaces';
-@import 'modular-scale';
-@import 'unicode-variables';
+@import 'scale';
+@import 'variables';
 @import 'defaults';
+@import 'helpers';
