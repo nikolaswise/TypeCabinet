@@ -1,11 +1,7 @@
-## v0.0.4
+# Change Log
+All notable changes to this project will be documented in this file.
+This project adheres to [Semantic Versioning](http://semver.org/).
 
-### Added
-- Updated Typesetting Mixins
-- Updated Composition Helpers
-- Simplified Defaults
-- Typeface mixins to go with extendables
-
-## v0.0.3
-- Change tooling for project from Middleman to Acetate.
-- Change Sass from Node Sass to LibSass.
+## 0.1.0 - 2015-04-04
+### Undocumented Stuff
+- Watch out.
