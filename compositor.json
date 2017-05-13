@@ -1,0 +1,99 @@
+{
+  "name": "nikolaswise/TypeCabinet",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "",
+  "branch": "",
+  "style": {
+    "name": "Brutalist",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BasicHeader",
+      "article": "article/MarkdownArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace",
+    "heading": {},
+    "typeScale": [
+      48,
+      32,
+      20,
+      18,
+      16,
+      14,
+      12
+    ],
+    "layout": {
+      "maxWidth": 1024,
+      "fluid": true
+    },
+    "colors": {
+      "text": "#333",
+      "background": "#fff",
+      "primary": "#666",
+      "secondary": "#888",
+      "highlight": "#1f80ff",
+      "muted": "#f6f6f6",
+      "border": "#eee"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "http://nikolaswise.github.io/TypeCabinet/",
+          "text": "Home"
+        },
+        {
+          "href": "https://github.com/nikolaswise/TypeCabinet",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/typecabinet",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "TypeCabinet",
+      "subhead": "Traditional Typesetting for Digital Publishing",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "TypeCabinet: Traditional Typesetting for Digital Publishing",
+          "url": "http://nikolaswise.github.io/TypeCabinet/"
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "nikolaswise",
+          "repo": "TypeCabinet"
+        }
+      ],
+      "text": "v0.1.0"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "<h3>Reference</h3>\n<table>\n<thead>\n<tr>\n<th>Variables</th>\n<th></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>$ratio</td>\n<td>Proportion that defines the <a href=\"#\">scale</a>.</td>\n</tr>\n<tr>\n<td>$body-size</td>\n<td>Default size of body type.</td>\n</tr>\n<tr>\n<td>$small-size</td>\n<td>Default size of small type.</td>\n</tr>\n<tr>\n<td>$baseline</td>\n<td>Increment that defines the <a href=\"#\">baseline grid</a>.</td>\n</tr>\n<tr>\n<td>$header-family</td>\n<td>Font stack to use for header elements.</td>\n</tr>\n<tr>\n<td>$body-family</td>\n<td>Font stack to use for default type elements.</td>\n</tr>\n<tr>\n<td>$secondary-family</td>\n<td>Font stack that suplements the body family. Usually serif if body is sans.</td>\n</tr>\n<tr>\n<td>$code-family</td>\n<td>Font stack to use for code elements.</td>\n</tr>\n<tr>\n<td>$header-tracking</td>\n<td>Default <a href=\"#\">tracking</a> for the header family.</td>\n</tr>\n<tr>\n<td>$body-tracking</td>\n<td>Default <a href=\"#\">tracking</a> for the body family.</td>\n</tr>\n<tr>\n<td>$secondary-tracking</td>\n<td>Default <a href=\"#\">tracking</a> for the secondary family.</td>\n</tr>\n<tr>\n<td>$code-tracking</td>\n<td>Default <a href=\"#\">tracking</a> for the code family.</td>\n</tr>\n</tbody>\n</table>\n<table>\n<thead>\n<tr>\n<th>Family Weights</th>\n<th></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>$var: 400, 700</td>\n<td>Takes two font weights. Sets the weight of the corresponding classname to the first, and the weight of the <code>&lt;b&gt;</code> and <code>&lt;strong&gt;</code> tags to the second.</td>\n</tr>\n<tr>\n<td>$header-regular: 400,600</td>\n<td>Will create two extendable helper classes - <code>.header-face</code> and <code>.header-italic</code>.</td>\n</tr>\n<tr>\n<td>$header-light: 300,400</td>\n<td>Will create two extendable helper classes - <code>.header-light</code> and <code>.header-light-italic</code>.</td>\n</tr>\n<tr>\n<td>$header-bold: false</td>\n<td>Will not create helper classes for that weight in family.</td>\n</tr>\n</tbody>\n</table>\n<table>\n<thead>\n<tr>\n<th>Mixins</th>\n<th></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>tracking(n)</td>\n<td>Sets <a href=\"#\">tracking</a> within the element in increments of 1/1000 em.</td>\n</tr>\n<tr>\n<td>leading(n)</td>\n<td>Sets the <a href=\"#\">line-height</a> of an element as a multiple of the baseline increment.</td>\n</tr>\n<tr>\n<td>word-spacing(n)</td>\n<td>Sets the <a href=\"#\">word spacing</a> within the element in increments of 1/1000 em.</td>\n</tr>\n<tr>\n<td>font-size(n)</td>\n<td>Sets the font-size of an element at an $n (integer) number of steps up or down the <a href=\"#\">modular scale</a>.</td>\n</tr>\n<tr>\n<td>modular-scale(n)</td>\n<td>Function that returns a rem value that corresponds to the $n (integer) number of steps up or down the <a href=\"#\">modular scale</a>.</td>\n</tr>\n</tbody>\n</table>\n<h3>Harmony &amp; Scale</h3>\n<p>TypeCabinet uses <a href=\"https://github.com/Team-Sass/modular-scale/blob/1.x/readme.md\">Modular Scale 1.0</a> to define a double-stranded composition scale. The scale is calculated from the <code>$ratio</code> variable, and the two base type size variables, <code>$body-size</code> and <code>$small-size</code>. The primary use for this scale is in defining font sizes, stepping up and down the scale to create a page that reflects principles of <a href=\"http://alistapart.com/article/more-meaningful-typography\">meaningful typography</a>. The <code>modular-scale()</code> function is also exposed, and returns rem values from the scale, and can be used to construct layouts and larger page structures.</p>\n<h3>Type Families</h3>\n<p>There are four type families exposed for use in TypeCabinet, though many projects may use less. Header, Body, Secondary, and Code families are ready to use in a variety of weights. Variables in the <code>_config.scss</code> file define the stacks for the given families, and helper classes can either be extended from within sass stylesheets, or applied directly to html elements.</p>\n<h3>Tracking, Leading, and Word Spacing</h3>\n<p>Default tracking options are available for each type family indendently within <code>_condfig.scss</code>. For example, if your body face consistently needs to be tracked out to maintain readabillity, you can</p>\n<h3>Vertical Rhythym</h3>\n<h3>Composing the Page</h3>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/nikolaswise/TypeCabinet",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/nikolaswise",
+          "text": "nikolaswise"
+        }
+      ]
+    }
+  ]
+}
